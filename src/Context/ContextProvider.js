@@ -9,7 +9,7 @@ const ContextProvider = ({ children }) => {
     const fetchData=async()=>{
       try{
         //const request=await axios.post("http://localhost:3006/allBooks");
-        const response=await axios.get("https://bookstore-7-br4w.onrender.com/books");
+        const response=await axios.get("https://bookstore-ea3m.onrender.com/books");
         console.log("Fetched data:", response.data);
         const localCart=JSON.parse(localStorage.getItem("cart"));
         setData(prev=>({...prev,books:response.data,cart:localCart || []}));
