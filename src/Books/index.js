@@ -60,7 +60,7 @@ const Books=()=>{
     const updateDB = async (id, book) => {
         console.log("Updating database with:", book);
         try {
-            const response = await axios.put(`https://bookstore-7-4l2b.onrender.com/books/${id}`, book);
+            const response = await axios.put(`https://bookstore-7-w0k1.onrender.com/books/${id}`, book);
             if(response.status===200){
                 setData(prevData => ({
                     ...prevData,
