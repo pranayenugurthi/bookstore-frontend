@@ -1,0 +1,98 @@
+.bookItem{
+    width: 45%;
+    display: flex;
+    /* border: 1px solid #021501; */
+   background-color: #ffffff40;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px #000000 inset;
+}
+.bookCoverImg{
+    max-width: 170px;
+    height: 250px;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 3px 2px #000000bd;
+    text-align: center;
+}
+.bookDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 15px;
+    /* width: 100%; */
+    background-color: #424040a1;
+        /* background-color: #424040de; */
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.detailInput{
+    background-color: #ffffff40;
+}
+.bookDetailsText{
+    color: #d6d1d1;
+    font-size: 14px;
+    margin: 0px;
+    font-weight: 600;
+    width: 100%;
+}
+.bookTitle{
+    margin: 0px;
+    color: #ffffff;
+    font-size: 18px;
+}
+.detailType{
+    color: #1b1b1a;
+    font-weight: 700;
+    margin-right: 5px;
+    width: 100px;
+}
+.bookPrice{
+    font-weight: 600;
+    color: #e4dede;
+    margin: 0px;
+}
+.searchInput{
+   padding: 3px 10px;
+    border: none;
+    background: transparent;
+    border-radius: 4px;
+    width: 200px;
+}
+.searchIcon{
+        color: #ffb309;
+    padding: 3px;
+    border: 1px solid black;
+    background-color: #4b4646;
+    font-weight: 800;
+    font-size: 20px;
+}
+.searchContainer{
+     background-color: #d6d1d1;
+    display: flex;
+    align-items: center;
+    border: 1px solid #000000ad;
+}
+.btnContainer{
+    display: flex;
+  
+    align-items: center;
+
+}
+.bookBtn{
+   background-color: #312f2c70;
+    color: #fbfbfb;
+    min-width: 60px;
+    max-width: 200px;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    margin-right: 20px;
+    margin-top: 5px;
+    /* box-shadow: 0px 0px 3px 1px inset #ffd288a3; */
+    box-shadow: 0px 0px 8px 1px #00000099 inset;
+    
+}

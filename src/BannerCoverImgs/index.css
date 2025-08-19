@@ -1,0 +1,26 @@
+.coverImgList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    list-style: none;
+    margin: auto;
+    width: 45%;
+
+}
+.coverImages{
+    width: 100px;
+    height: 150px;
+    background-size: cover;
+    margin: 8px;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 3px 2px #000000bd;
+}
+.bookId{
+    
+    color: red;
+    font-weight: 600;
+    background-color: #000000;
+    width: 25px;
+    margin: 0 auto;
+}

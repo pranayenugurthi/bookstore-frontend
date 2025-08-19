@@ -1,0 +1,25 @@
+.itemQuantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+}
+.quantityText{
+    color: #ffffff;
+    font-weight: 500;
+    width: 20px;
+    text-align: center;
+}
+.quantityBtn{
+    background-color: #254e7ad4;
+    color: #ffffff;
+    border: 1px solid #000000c8;
+    border-radius: 6px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    box-shadow: 0px 0px 4px 2px inset #000000c8;
+    cursor: pointer;
+    outline: none;
+}

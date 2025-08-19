@@ -1,0 +1,62 @@
+.headerContainer{
+    height: 40px;
+    /* background-color: #8e8e9f; */
+        background-color: #3f3d3d;
+    box-shadow: 0px 0px 8px 2px #282826 inset;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 10px 20px;
+}
+.heading{
+    font-size: 26px;
+    font-weight: bold;
+    color: #e3b577; 
+    text-shadow: 2px 3px 5px BLACK;
+    margin: 0px;
+}
+.headerList{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.headerLink{
+    margin: 0 10px;
+   
+    font-size: 16px;
+      font-weight: 600;
+      text-shadow: 2px 2px 3px BLACK;
+
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 60px;
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+}
+.linkElement{
+ color: #e3b577;
+ text-decoration: none;
+ margin: 0px;
+ cursor: pointer;
+}
+
+.cartCount{
+    background-color: #e3b477d0;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin: 0px;
+    margin-left: 5px;
+    margin-top: 2px;
+    font-size: 12px;
+    text-shadow: none;
+    font-weight: 700;
+    box-shadow: 0px 0px 2px 1px #000000c1 inset;
+}
+.headerLogo{
+    text-decoration: none;
+}
