@@ -42,7 +42,10 @@ const Header=()=>{
                 </li>}
             </ul>
             )}
-            <button className="linkElement logoutBtn smLogoutBtn" onClick={()=>onLoginLogout()}>Logout</button>
+            {
+                (data.pageType!=="login")&& <button className="linkElement logoutBtn smLogoutBtn" onClick={()=>onLoginLogout()}>Logout</button>
+            }
+           
         </div>
     )
 }
