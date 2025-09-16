@@ -4,13 +4,19 @@
     /* border: 1px solid #021501; */
    background-color: #ffffff40;
     padding: 15px;
-    margin: 10px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 2px #000000 inset;
+    box-shadow: 0px 0px 8px 2px #000000 inset;
+}
+.bookItem:hover{
+    box-shadow: 0px 0px 8px 2px #000000;
 }
 .bookCoverImg{
-    max-width: 170px;
-    height: 250px;
+    /* width: 170px;
+    min-width: 170px;
+    height: 250px; */
+    width: 150px;
+    min-width: 150px;
+    height: 210px;
     border: 1px solid #000000;
     box-shadow: 0px 0px 3px 2px #000000bd;
     text-align: center;
@@ -53,12 +59,10 @@
     color: #e4dede;
     margin: 0px;
 }
-.searchInput{
-   padding: 3px 10px;
-    border: none;
-    background: transparent;
-    border-radius: 4px;
-    width: 200px;
+.priceTag{
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 2px;
 }
 .searchIcon{
         color: #ffb309;
@@ -76,9 +80,10 @@
 }
 .btnContainer{
     display: flex;
-  
+    justify-content: center;
     align-items: center;
-
+    gap: 10px;
+    margin-top: 10px;
 }
 .bookBtn{
    background-color: #312f2c70;
@@ -90,9 +95,71 @@
     border-radius: 6px;
     font-weight: 500;
     font-size: 12px;
-    margin-right: 20px;
-    margin-top: 5px;
+    /* margin-right: 20px;
+    margin-top: 5px; */
     /* box-shadow: 0px 0px 3px 1px inset #ffd288a3; */
     box-shadow: 0px 0px 8px 1px #00000099 inset;
     
+}
+.bookDetailsText{
+    color: #d6d1d1;
+    font-size: 15px;
+    margin: 0px;
+    /* font-weight: 500; */
+    width: 100%;
+}
+.rupeeIcon{
+    font-size: 12px;
+}
+.smallScreen{
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    .bookDetailsText{
+        font-size: 14px;
+        font-weight: normal;
+    }
+    .bookBtn{
+        padding: 8px 10px;
+        text-align: center;
+        margin: 0px;
+    }
+    .smInputText{
+        width: 97%;
+    }
+    .bookItem{
+        width: 40vw;
+    
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .bookTitle{
+        font-size: 14px;
+    }
+    .bookCoverImg{
+        /* width: 100px; */
+        width: 100px;
+        min-width: 80px;
+        height: 120px;
+        margin: auto 0px;
+    }
+    .bookDetails{
+        margin: 0px;
+        width: 40%;
+        flex-grow: 1;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .largeScreen{
+        display: none;
+    }
+    .smallScreen{
+        display: block;
+    }
+}
+@media screen and (max-width:700px) {
+    .bookItem{
+        width: 85%;
+    }
 }

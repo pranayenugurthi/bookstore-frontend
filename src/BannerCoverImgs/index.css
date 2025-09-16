@@ -4,13 +4,13 @@
     flex-wrap: wrap;
     padding: 0px;
     list-style: none;
-    margin: auto;
-    width: 45%;
-
+    margin: o auto;
+    width: 70vw;
+   
 }
 .coverImages{
-    width: 100px;
-    height: 150px;
+    width: 9vw;
+    height: 13vw;
     background-size: cover;
     margin: 8px;
     border: 1px solid #000000;
@@ -23,4 +23,12 @@
     background-color: #000000;
     width: 25px;
     margin: 0 auto;
+}
+
+@media screen and (max-width:500px) {
+    
+    .coverImages{
+        width: 13vw;
+        height: 20vw;
+    }
 }

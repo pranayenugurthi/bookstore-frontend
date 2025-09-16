@@ -1,12 +1,15 @@
 .headerContainer{
-    height: 40px;
+    height: 60px;
+    width: 100vw;
     /* background-color: #8e8e9f; */
         background-color: #3f3d3d;
     box-shadow: 0px 0px 8px 2px #282826 inset;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 1;
     padding: 10px 20px;
+    box-sizing: border-box;
 }
 .heading{
     font-size: 26px;
@@ -59,4 +62,51 @@
 }
 .headerLogo{
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logoutBtn{
+   background-color: transparent;
+    padding: 4px 12px;
+}
+.largeScreeFilter{
+    display: block;
+}
+.smLogoutBtn{
+    display: none;
+}
+.profileCard{
+   background-color: #000000b0;
+    border-radius: 50%;
+    padding: 6px 8px;
+    border: 1px solid #e3b577d1;
+    box-shadow: 0px 0px 6px 0px inset;
+    margin-left: 5px;
+}
+.smProfileCard{
+        display: none;
+    }
+@media screen and (max-width:700px) {
+    .largeScreeFilter{
+        display: none;
+    }
+}
+@media screen and (max-width:500px) {
+    .smLogoutBtn{
+        display: block;
+    }
+    .smProfileCard{
+        display: block;
+    }
+    .lgScreenNavLink{
+        display: none;
+    }
+    .headerLink{
+        font-size:14px;
+        margin: 0px;
+    }
+    .heading{
+        font-size: 20px;
+    }
 }

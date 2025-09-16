@@ -13,7 +13,7 @@ const BannerCoverImgs=({data})=>{
         
         const getRandomBooks=()=>{
             const randomBooks=[];
-            while(randomBooks.length<10){
+            while(randomBooks.length<12){
                 const index=Math.floor(Math.random()*data.books.length);
                 if(!randomBooks.some(each=>each.isbn===data.books[index].isbn)){
                     randomBooks.push(data.books[index]);

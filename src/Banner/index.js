@@ -1,20 +1,26 @@
 import { useContext, useEffect } from "react";
 import MyContext from "../Context/MyContext";
 import BannerCoverImgs from "../BannerCoverImgs";
-import {useNavigate} from "react-router-dom";
-
+import {useNavigate,} from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import Cookies from "js-cookie";
 import "./index.css"
 const Banner=()=>{
     const {data,setData}=useContext(MyContext);
     console.log("Banner data:", data);
     const navigate=useNavigate();
+    
     useEffect(()=>{
-        setData(prev => ({ ...prev, displayCartItems: false ,inBooksPage:false}));
+        setData(prev => ({ ...prev, displayCartItems: false ,pageType:"banner"}));
     },[data.books])
-
+    const cookieValue=Cookies.get("userLogin");
+    if(data.userDetails===null && cookieValue===undefined){
+        console.log("User not logged in, redirecting to login page");
+        return <Navigate to="/login" />
+    }
     return(
         <div className="bannerContainer">
-            <div className="bannerContent">
+            
                 <BannerCoverImgs data={data}/>
                 <p className="bannerText"> 
                     Welcome to our bookstore—the perfect place to find your 
@@ -25,7 +31,7 @@ const Banner=()=>{
                     inspire you!
                 </p>
                 <button className="bannerButton" onClick={() => {navigate("/books")}}>Shop Now</button>
-            </div>
+          
         </div>
     )
 }
