@@ -28,7 +28,7 @@ const ForgotPassword=({user,setUser,setData,checkUserExist,setLoginState,setSign
   
     
             if(showResetPwd && (user.confirmPassword===user.password)){
-                const updateUserDetails= await axios.put(`http://localhost:3006/updateUser/${userDetails.id}`, {
+                const updateUserDetails= await axios.put(`https://bookstore-backend-du2z.onrender.com/updateUser/${userDetails.id}`, {
                     password: user.password
                 });
                 console.log("Password updated successfully:", updateUserDetails);

@@ -10,8 +10,8 @@ const ContextProvider = ({ children }) => {
     
     const fetchData=async()=>{
       try{
-        const response=await axios.get("http://localhost:3006/books");
-        // const response=await axios.get("https://bookstore-o336.onrender.com/books");
+        // const response=await axios.get("http://localhost:3006/books");
+        const response=await axios.get("https://bookstore-backend-du2z.onrender.com/books");
         
           console.log("Fetched data:", response.data);
       

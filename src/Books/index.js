@@ -107,7 +107,7 @@ const Books=()=>{
         console.log("Updating database with:", book);
         try {
             // const response = await axios.put(`https://bookstore-o336.onrender.com/books/${id}`, book);
-            const response = await axios.put(`http://localhost:3006/books/${id}`, book);
+            const response = await axios.put(`https://bookstore-backend-du2z.onrender.com/books/${id}`, book);
             if(response.status===200){
                 setData(prevData => ({
                     ...prevData,

@@ -40,13 +40,13 @@ const BookDetails = () => {
     const username=data.userDetails?.username||cookieData?.username;
 
    const getRating=async()=>{
-       const ratingResponse=await axios(`http://localhost:3006/book/${book.id}/rating`)
+       const ratingResponse=await axios(`https://bookstore-backend-du2z.onrender.com/book/${book.id}/rating`)
        const ratings=await ratingResponse.data;
       // console.log("Ratings in fetching:", ratings);
     setRating({data:ratings});
    }
    const getComments=async()=>{
-       const commentResponse=await axios(`http://localhost:3006/book/${book.id}/comments`);
+       const commentResponse=await axios(`https://bookstore-backend-du2z.onrender.com/book/${book.id}/comments`);
        const comments=await commentResponse.data;
       // console.log("Comments in fetching:", comments);
         setBookComments(comments);
@@ -76,7 +76,7 @@ const BookDetails = () => {
     
     const handleAddComment=async (comment)=>{
        // console.log("add Comment",comment);
-        const response=await axios.post(`http://localhost:3006/book/${book.id}/addComments`, {
+        const response=await axios.post(`https://bookstore-backend-du2z.onrender.com/book/${book.id}/addComments`, {
             username:data.userDetails.username,
             comment,
             
@@ -97,13 +97,13 @@ const BookDetails = () => {
         }
         const checkRatingExist=rating.data.find(each=>each.bookId===book.id && each.username===username);
         if(checkRatingExist){
-            const response=await axios.put(`http://localhost:3006/book/${book.id}/updateRating`, {
+            const response=await axios.put(`https://bookstore-backend-du2z.onrender.com/book/${book.id}/updateRating`, {
                 username,
                 rating:userRating
             });
             const result=await response.data;
         }else{
-            const response=await axios.post(`http://localhost:3006/book/${book.id}/addRating`, {
+            const response=await axios.post(`https://bookstore-backend-du2z.onrender.com/book/${book.id}/addRating`, {
             username,
             rating:userRating
             });

@@ -50,7 +50,7 @@ const Login=()=>{
         }
     }
     const checkUserExist=async (checkingType)=>{
-        const response=await axios.get("http://localhost:3006/users");
+        const response=await axios.get("https://bookstore-backend-du2z.onrender.com/users");
         if(response.status === 200 && response?.data.length>0){
             let userExist;
             if(checkingType === "login"){
@@ -70,7 +70,7 @@ const Login=()=>{
             role: "user",
             resetPwd: user.resetPwd
         };
-        const response=await axios.post("http://localhost:3006/addUser", newUser);
+        const response=await axios.post("https://bookstore-backend-du2z.onrender.com/addUser", newUser);
        
         if(response.status === 201){
             console.log("User added successfully:", response.data);
