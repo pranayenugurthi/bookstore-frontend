@@ -13,8 +13,11 @@ const Cart=()=>{
         setData(prev=>({...prev,displayCartItems:true,showFilters:false,pageType:"cart"}));
      },[])
     const cookieValue = Cookies.get("userLogin");
-    if(data.userDetails===null && cookieValue===undefined){
-        return <Navigate to="/login" />
+    if(!cookieValue){
+        if(!data.userDetails){
+            console.log("in Books checking", data.userDetails);
+            return <Navigate to="/login" />
+        }
     }
      const updateCartItem=(id, quantity)=>{
          const updatedCart = data.cart.map(item=>{

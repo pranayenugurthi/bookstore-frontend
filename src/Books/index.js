@@ -32,9 +32,11 @@ const Books=()=>{
     },[])
     const cookieValue=Cookies.get("userLogin");
      console.log("userDetails",data.userDetails,cookieValue)
-    if(data.userDetails===null && cookieValue===undefined){
-        console.log("in Books checking", data.userDetails);
-         return <Navigate to="/login" />
+    if(!cookieValue){
+        if(!data.userDetails){
+            console.log("in Books checking", data.userDetails);
+            return <Navigate to="/login" />
+        }
     }
     const closingFilter=()=>{
         setData(prev => ({ ...prev, showFilters: false }));

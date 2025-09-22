@@ -88,7 +88,7 @@ const BookItem = ({ book, onSave, setData, cart,user }) => {
                      <p className="bookDetailsText"><span className="detailType">Description :</span> {book.description}</p>
                  )}
                  <div className="btnContainer">
-                    {(bookValues.id !== book.id && user?.role!=="user") && <button className="bookBtn" onClick={()=>setBookValues({...book,price:randomPrice})}>Edit</button>}
+                    {(bookValues.id !== book.id && user?.role!=="user") && <button className="bookBtn" onClick={()=>setBookValues({...book})}>Edit</button>}
                     {bookValues.id === book.id && <button className="bookBtn" onClick={()=>setBookValues({})}>Cancel</button>}
                     {bookValues.id === book.id && <button className="bookBtn" onClick={()=>checkForChanges(book)}>Save</button>}
                     <button className="bookBtn" onClick={()=>{cartUpdate(book)}}>{cartBtnText}</button>

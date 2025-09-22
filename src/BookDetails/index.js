@@ -67,8 +67,11 @@ const BookDetails = () => {
     },[])
     
     // console.log(user)
-    if(data.userDetails===null && cookieData===undefined ){
-        return <Navigate to="/login" />
+   if(!cookieValue){
+        if(!data.userDetails){
+            console.log("in Books checking", data.userDetails);
+            return <Navigate to="/login" />
+        }
     }
     if(!book){
         return

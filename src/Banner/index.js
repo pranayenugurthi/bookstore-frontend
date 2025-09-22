@@ -14,9 +14,15 @@ const Banner=()=>{
         setData(prev => ({ ...prev, displayCartItems: false ,pageType:"banner"}));
     },[data.books])
     const cookieValue=Cookies.get("userLogin");
+    console.log("cookieValue", cookieValue)
+    if(!cookieValue){
+        if(!data.userDetails){
+            return <Navigate to="/login" />
+        }
+    }
     if(data.userDetails===null && cookieValue===undefined){
         console.log("User not logged in, redirecting to login page");
-        return <Navigate to="/login" />
+        
     }
     return(
         <div className="bannerContainer">
