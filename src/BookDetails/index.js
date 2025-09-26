@@ -128,7 +128,10 @@ const BookDetails = () => {
         }
         setData(prev=>({...prev,cart:updatedCart}))
     }
-     const averageRating=rating.data.length === 0 ? 0 : rating.data.reduce((acc,each)=>(acc+each.rating),0)/rating.data.length;
+    console.log("ratingData ",rating.data)
+    const filterBookRating=rating.data?.filter(each=>each.bookId===book.id)
+
+     const averageRating=filterBookRating.length === 0 ? 0 : filterBookRating.reduce((acc,each)=>(acc+each.rating),0)/filterBookRating.length;
      const userRating=rating.data.length===0? 0:rating.data.find(each=>each.username===username && each.bookId===book.id)?.rating||0;
     return (
         <div className="bookDetailsPage">
@@ -141,7 +144,7 @@ const BookDetails = () => {
                         <p className="bookDetailsType"><span className="bookDetailsLabel">Genre:</span>{book.genre}</p>
                         <p className="bookDetailsType"><span className="bookDetailsLabel">Page Count:</span>{book.pageCount}</p>
                         <p className="bookDetailsType"><span className="bookDetailsLabel">Language:</span>{book.language}</p>
-                        <p className="bookDetailsType ratingFlex"><span className="bookDetailsLabel">Rating:</span>{averageRating}<FaStar className="greenStar"/> (users: {rating.data.length})</p>
+                        <p className="bookDetailsType ratingFlex"><span className="bookDetailsLabel">Rating:</span>{averageRating}<FaStar className="greenStar"/> (users: {filterBookRating.length})</p>
                         <p className="bookDetailsType"><span className="bookDetailsLabel">Price:</span><FaRupeeSign className="rupeeIcon"/>{book.price}</p>
                         <p className="bookDetailsType"><span className="bookDetailsLabel">Published Date:</span>{new Date(book.publishedDate).toLocaleDateString()}</p>
                         <p className="bookDetailsType"><span className="bookDetailsLabel">Description:</span>{book.description}</p>
